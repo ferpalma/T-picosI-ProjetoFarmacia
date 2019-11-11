@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+<ui:composition template="template.xhtml">
+<ui:define name="conteudo">
+
+	<center>
+		<h1>Menu Cliente</h1>
+
+		<h:form method="get">
+			<h:panelGrid columns="1">
+				<div id="btnn">
+					
+					<h:commandButton value="CADASTRO USUARIO" styleClass="btn"
+						action="#{menuClienteController.cadastroUsuario()}" />
+					<h:commandButton value="CONSULTA PRODUTO" styleClass="btn"
+						action="#{menuClienteController.consultaProduto()}" />
+					<h:commandButton value="MEU CARRINHO" styleClass="btn"
+						action="#{menuClienteController.carrinho()}" />
+					<h:commandButton value="HISTÓRICO" styleClass="btn"
+						action="#{menuClienteController.historico()}" />
+					<h:commandButton value="SAIR" styleClass="btn"
+						action="#{menuClienteController.telaLogin()}" />
+				</div>
+			</h:panelGrid>
+		</h:form>
+
+	</center>
+</ui:define>
+</ui:composition>
+</html>

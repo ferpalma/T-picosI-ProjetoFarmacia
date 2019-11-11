@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+<ui:composition template="template.xhtml">
+<ui:define name="conteudo">
+
+	<center>
+		<h1>Menu Administrador</h1>
+
+		<h:form method="get">
+			<h:panelGrid columns="1">
+				<div id="btnn">
+					
+					<h:commandButton value="CADASTRO USUARIO" styleClass="btn"
+						action="#{menuAdministradorController.cadastraUsuario()}" />
+					<h:commandButton value="CADASTRO PRODUTO" styleClass="btn"
+						action="#{menuAdministradorController.cadastroProduto()}" />
+					<h:commandButton value="CONSULTA CLIENTE" styleClass="btn"
+						action="#{menuAdministradorController.consultaCliente()}" />
+					<h:commandButton value="CONSULTA PRODUTO" styleClass="btn"
+						action="#{menuAdministradorController.consultaProduto()}" />
+					<h:commandButton value="VENDA PRODUTO" styleClass="btn"
+						action="#{menuAdministradorController.venda()}" />
+					<h:commandButton value="HISTÓRICO VENDA" styleClass="btn"
+						action="#{menuAdministradorController.historico()}" />
+					<h:commandButton value="SAIR" styleClass="btn"
+						action="#{menuAdministradorController.telaLogin()}" />
+				</div>
+			</h:panelGrid>
+		</h:form>
+
+	</center>
+</ui:define>
+</ui:composition>
+</html>
